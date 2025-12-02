@@ -1,15 +1,29 @@
 import java.io.File
 
-fun isInvalid(input: String): Boolean {
-    if (input.length == 2) return input[0] == input[1]
+fun isInvalid(s: String): Boolean {
+    val n = s.length
+    val lps = IntArray(n)
 
-    if (input.length % 2 != 0) return false
+    // Build LPS (Longest Prefix Suffix)
+    var len = 0
+    var i = 1
+    while (i < n) {
+        if (s[i] == s[len]) {
+            len++
+            lps[i] = len
+            i++
+        } else {
+            if (len != 0) {
+                len = lps[len - 1]
+            } else {
+                lps[i] = 0
+                i++
+            }
+        }
+    }
 
-    for (i in (input.length / 2) ..< input.length)
-        if (input[i] != input[i - (input.length / 2)])
-            return false
-    
-    return true
+    val longest = lps[n - 1]
+    return longest > 0 && n % (n - longest) == 0
 }
 
 fun main() {
