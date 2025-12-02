@@ -8,17 +8,8 @@ fun main() {
         val rotation: Char = line[0];
         val value: Int = line.substring(1).toInt();
 
-        when (rotation) {
-            'L' -> {
-                pointer -= value
-                pointer = if (pointer < 0) (100 + pointer) % 100 else pointer
-            }
-
-            'R' -> {
-                pointer += value
-                pointer = if (pointer > 99) (pointer - 100) % 100 else pointer
-            }
-        }
+        pointer += if (rotation == 'R') value else -value
+        pointer %= 100
 
         if (pointer == 0) zeroCount++
     }
