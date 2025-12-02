@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ $# -ne 1 ]]; then
-  echo "Usage: $0 path/to/File.kt" >&2
+if [[ $# -ne 2 ]]; then
+  echo "Usage: $0 <day> <part>  # e.g. $0 1 2 to run day1/part2.kt" >&2
   exit 1
 fi
 
-KOTLIN_FILE="$1"
+DAY="$1"
+PART="$2"
+
+KOTLIN_FILE="day${DAY}/part${PART}.kt"
 
 if [[ ! -f "$KOTLIN_FILE" ]]; then
   echo "Error: Kotlin file '$KOTLIN_FILE' not found." >&2
