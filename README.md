@@ -127,7 +127,7 @@ The repo avoids unnecessary abstraction so readers can clearly follow the logic 
 
 ## 🎯 Goals for This Repository
 
-- Solve **all 25 days**
+- Solve **all 12 days**
 - Provide **idiomatic Kotlin** examples
 - Keep solutions clean enough for beginners
 - Keep execution fast
