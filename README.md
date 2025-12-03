@@ -1,5 +1,6 @@
 # Advent of Code 2025 — Kotlin Solutions  
-<img width="942" height="473" alt="image" src="https://github.com/user-attachments/assets/0aba343a-b332-4eb2-83d6-3c81d79d6cf3" />
+<img width="1536" height="1024" alt="banner" src="https://github.com/user-attachments/assets/7905fdea-ac21-434f-9d06-da9de2f6bb2e" />
+
 
 Fast, clean, and fully reproducible solutions for **Advent of Code 2025**, written in **Kotlin** with a lightweight runner script for daily execution.
 
